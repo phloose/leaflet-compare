@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack",
+    "prepare": "npm run build",
     "prepublish": "npm run clean && npm run build",
     "preversion": "npm test && npm run build",
     "lint": "standard index.js",
