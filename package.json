@@ -31,7 +31,6 @@
         "webpack-dev-server": "^3.11.2"
     },
     "dependencies": {
-        "css-img-datauri-stream": "^0.1.5",
         "cssify": "^1.0.3",
         "leaflet": "^1.7.1"
     },
