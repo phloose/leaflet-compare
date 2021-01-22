@@ -19,18 +19,19 @@
   "author": "Gregor MacLennan / Digital Democracy",
   "license": "MIT",
   "devDependencies": {
-    "budo": "^7.1.0",
-    "css-loader": "^0.28.7",
-    "file-loader": "^0.11.2",
-    "rimraf": "^2.6.1",
-    "standard": "^5.4.1",
-    "style-loader": "^0.18.1",
-    "webpack": "^3.5.5"
+    "budo": "^11.6.4",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "rimraf": "^3.0.2",
+    "standard": "^16.0.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
   },
   "dependencies": {
     "css-img-datauri-stream": "^0.1.5",
-    "cssify": "^0.8.0",
-    "leaflet": ">=0.7.7 <2.0.0"
+    "cssify": "^1.0.3",
+    "leaflet": "^1.7.1"
   },
   "repository": {
     "type": "git",
