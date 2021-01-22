@@ -75,7 +75,7 @@ L.Control.SplitMap = L.Control.extend({
 
     setPosition: noop,
 
-    includes: L.Mixin.Events,
+    includes: L.Evented.prototype,
 
     addTo(map) {
         this.remove();
