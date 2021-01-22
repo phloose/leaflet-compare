@@ -32,5 +32,9 @@ module.exports = [
         module: {
             rules: rules,
         },
+        devServer: {
+            index: "./index.html",
+            publicPath: "./src/",
+        },
     },
 ];
