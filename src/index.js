@@ -42,7 +42,13 @@ function uncancelMapDrag(e) {
 
 // convert arg to an array - returns empty array if arg is undefined
 function asArray(arg) {
-    return arg === "undefined" ? [] : Array.isArray(arg) ? arg : [arg];
+    if (typeof arg === "undefined") {
+        return [];
+    }
+    if (Array.isArray(arg)) {
+        return arg;
+    }
+    return [arg];
 }
 
 function noop() {}
@@ -74,27 +80,29 @@ L.Control.SplitMap = L.Control.extend({
     addTo(map) {
         this.remove();
         this._map = map;
-        const container = (this._container = L.DomUtil.create(
+        this._container = L.DomUtil.create(
             "div",
             "leaflet-sbs",
+            // eslint-disable-next-line no-underscore-dangle
             map._controlContainer,
-        ));
+        );
         this._divider = L.DomUtil.create(
             "div",
             "leaflet-sbs-divider",
-            container,
+            this._container,
         );
-        const range = (this._range = L.DomUtil.create(
+        this._range = L.DomUtil.create(
             "input",
             "leaflet-sbs-range",
-            container,
-        ));
-        range.type = "range";
-        range.min = 0;
-        range.max = 1;
-        range.step = "any";
-        range.value = 0.5;
-        range.style.paddingLeft = range.style.paddingRight = `${this.options.padding}px`;
+            this._container,
+        );
+        this._range.type = "range";
+        this._range.min = 0;
+        this._range.max = 1;
+        this._range.step = "any";
+        this._range.value = 0.5;
+        // eslint-disable-next-line no-multi-assign
+        this._range.style.paddingLeft = this._range.style.paddingRight = `${this.options.padding}px`;
         this._addEvents();
         this._updateClip();
         return this;
@@ -104,19 +112,19 @@ L.Control.SplitMap = L.Control.extend({
         if (!this._map) {
             return this;
         }
-        this._leftLayers.forEach(left_layer => {
-            if (left_layer.getContainer) {
-                left_layer.getContainer().style.clip = "";
+        this._leftLayers.forEach(leftLayer => {
+            if (leftLayer.getContainer) {
+                leftLayer.getContainer().style.clip = "";
             } else {
-                left_layer.getPane().style.clip = "";
+                leftLayer.getPane().style.clip = "";
             }
         });
 
-        this._rightLayers.forEach(right_layer => {
-            if (right_layer.getContainer) {
-                right_layer.getContainer().style.clip = "";
+        this._rightLayers.forEach(rightLayer => {
+            if (rightLayer.getContainer) {
+                rightLayer.getContainer().style.clip = "";
             } else {
-                right_layer.getPane().style.clip = "";
+                rightLayer.getPane().style.clip = "";
             }
         });
         this._removeEvents();
@@ -139,21 +147,22 @@ L.Control.SplitMap = L.Control.extend({
         const clipLeft = `rect(${[nw.y, clipX, se.y, nw.x].join("px,")}px)`;
         const clipRight = `rect(${[nw.y, se.x, se.y, clipX].join("px,")}px)`;
 
-        this._leftLayers.forEach(left_layer => {
-            if (left_layer.getContainer) {
-                left_layer.getContainer().style.clip = clipLeft;
+        this._leftLayers.forEach(leftLayer => {
+            if (leftLayer.getContainer) {
+                leftLayer.getContainer().style.clip = clipLeft;
             } else {
-                left_layer.getPane().style.clip = clipLeft;
+                leftLayer.getPane().style.clip = clipLeft;
             }
         });
 
-        this._rightLayers.forEach(right_layer => {
-            if (right_layer.getContainer) {
-                right_layer.getContainer().style.clip = clipRight;
+        this._rightLayers.forEach(rightLayer => {
+            if (rightLayer.getContainer) {
+                rightLayer.getContainer().style.clip = clipRight;
             } else {
-                right_layer.getPane().style.clip = clipRight;
+                rightLayer.getPane().style.clip = clipRight;
             }
         });
+        return this;
     },
 
     _addEvents() {
