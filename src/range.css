@@ -1,6 +1,6 @@
 .leaflet-sbs-range {
     -webkit-appearance: none;
-    display: inline-block!important;
+    display: inline-block !important;
     vertical-align: middle;
     height: 0;
     padding: 0;
@@ -65,7 +65,7 @@
 }
 .leaflet-sbs-range::-moz-range-thumb {
     padding: 0;
-    right: 0    ;
+    right: 0;
     background: #fff;
     height: 40px;
     width: 40px;
@@ -91,9 +91,8 @@
     cursor: default;
 }
 .leaflet-sbs-range:focus {
-    outline: none!important;
+    outline: none !important;
 }
 .leaflet-sbs-range::-moz-focus-outer {
     border: 0;
 }
-

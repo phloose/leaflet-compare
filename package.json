@@ -1,44 +1,44 @@
 {
-  "name": "leaflet-splitmap",
-  "version": "1.0.1",
-  "description": "Compare two Leaflet layers side by side",
-  "main": "src/index.js",
-  "scripts": {
-    "clean": "rimraf dist",
-    "build": "webpack",
-    "prepare": "npm run build",
-    "prepublish": "npm run clean && npm run build",
-    "preversion": "npm test && npm run build",
-    "lint": "standard index.js",
-    "start": "budo --live",
-    "test": "npm run lint"
-  },
-  "keywords": [
-    "leaflet"
-  ],
-  "author": "Gregor MacLennan / Digital Democracy",
-  "license": "MIT",
-  "devDependencies": {
-    "budo": "^11.6.4",
-    "css-loader": "^5.0.1",
-    "file-loader": "^6.2.0",
-    "rimraf": "^3.0.2",
-    "standard": "^16.0.3",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.17.0",
-    "webpack-cli": "^4.4.0"
-  },
-  "dependencies": {
-    "css-img-datauri-stream": "^0.1.5",
-    "cssify": "^1.0.3",
-    "leaflet": "^1.7.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/QuantStack/leaflet-splitmap.git"
-  },
-  "bugs": {
-    "url": "https://github.com/QuantStack/leaflet-splitmap/issues"
-  },
-  "homepage": "https://github.com/QuantStack/leaflet-splitmap#readme"
+    "name": "leaflet-splitmap",
+    "version": "1.0.1",
+    "description": "Compare two Leaflet layers side by side",
+    "main": "src/index.js",
+    "scripts": {
+        "clean": "rimraf dist",
+        "build": "webpack",
+        "prepare": "npm run build",
+        "prepublish": "npm run clean && npm run build",
+        "preversion": "npm test && npm run build",
+        "lint": "standard index.js",
+        "start": "budo --live",
+        "test": "npm run lint"
+    },
+    "keywords": [
+        "leaflet"
+    ],
+    "author": "Gregor MacLennan / Digital Democracy",
+    "license": "MIT",
+    "devDependencies": {
+        "budo": "^11.6.4",
+        "css-loader": "^5.0.1",
+        "file-loader": "^6.2.0",
+        "rimraf": "^3.0.2",
+        "standard": "^16.0.3",
+        "style-loader": "^2.0.0",
+        "webpack": "^5.17.0",
+        "webpack-cli": "^4.4.0"
+    },
+    "dependencies": {
+        "css-img-datauri-stream": "^0.1.5",
+        "cssify": "^1.0.3",
+        "leaflet": "^1.7.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/QuantStack/leaflet-splitmap.git"
+    },
+    "bugs": {
+        "url": "https://github.com/QuantStack/leaflet-splitmap/issues"
+    },
+    "homepage": "https://github.com/QuantStack/leaflet-splitmap#readme"
 }
