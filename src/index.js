@@ -1,6 +1,6 @@
-const L = require("leaflet");
-require("./layout.css");
-require("./range.css");
+import L from "leaflet";
+import "./layout.css";
+import "./range.css";
 
 let mapWasDragEnabled;
 let mapWasTapEnabled;
@@ -206,4 +206,6 @@ L.control.splitMap = function (leftLayers, rightLayers, options) {
     return new L.Control.SplitMap(leftLayers, rightLayers, options);
 };
 
-module.exports = L.Control.SplitMap;
+export const { SplitMap } = L.Control.SplitMap;
+
+export default L;
