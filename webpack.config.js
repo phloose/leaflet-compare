@@ -32,6 +32,9 @@ module.exports = [
         module: {
             rules,
         },
+        externals: {
+            leaflet: "L",
+        },
         devServer: {
             index: "./index.html",
             publicPath: "./src/",
