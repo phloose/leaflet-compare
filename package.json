@@ -10,7 +10,7 @@
         "prepublish": "npm run clean && npm run build",
         "preversion": "npm test && npm run build",
         "lint": "eslint src/index.js",
-        "start": "webpack serve --open",
+        "start": "webpack serve --open --mode=development",
         "test": "npm run lint"
     },
     "keywords": [
