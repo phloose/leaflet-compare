@@ -8,6 +8,16 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: "module",
     },
+    overrides: [
+        {
+            files: [
+                "**/*.spec.js",
+            ],
+            env: {
+                jest: true,
+            },
+        },
+    ],
     rules: {
         quotes: ["error", "double"],
         indent: [
