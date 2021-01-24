@@ -11,9 +11,10 @@ const rules = [
         test: /\.(jpg|png|gif|svg)$/,
         use: [
             {
-                loader: "file-loader",
+                loader: "url-loader",
                 options: {
-                    publicPath: "/dist/",
+                    limit: 8000,
+                    name: "images/[hash]-[name].[ext]",
                 },
             },
         ],
