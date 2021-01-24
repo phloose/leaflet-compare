@@ -1,10 +1,11 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { version } = require("./package.json");
 
 const rules = [
     {
         test: /\.css$/,
-        use: ["css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
     },
     {
         test: /\.(jpg|png|gif|svg)$/,
@@ -39,5 +40,8 @@ module.exports = [
             index: "./index.html",
             publicPath: "./src/",
         },
+        plugins: [new MiniCssExtractPlugin({
+            filename: "leaflet-splitmap.css",
+        })],
     },
 ];
