@@ -30,9 +30,6 @@
         "webpack-cli": "^4.4.0",
         "webpack-dev-server": "^3.11.2"
     },
-    "dependencies": {
-        "leaflet": "^1.7.1"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/QuantStack/leaflet-splitmap.git"
@@ -40,5 +37,8 @@
     "bugs": {
         "url": "https://github.com/QuantStack/leaflet-splitmap/issues"
     },
-    "homepage": "https://github.com/QuantStack/leaflet-splitmap#readme"
+    "homepage": "https://github.com/QuantStack/leaflet-splitmap#readme",
+    "peerDependencies": {
+        "leaflet": "^1.7.1"
+    }
 }
