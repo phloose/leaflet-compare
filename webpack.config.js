@@ -1,7 +1,7 @@
-var path = require("path");
-var version = require("./package.json").version;
+const path = require("path");
+const { version } = require("./package.json");
 
-var rules = [
+const rules = [
     {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
@@ -30,7 +30,7 @@ module.exports = [
         },
         devtool: "source-map",
         module: {
-            rules: rules,
+            rules,
         },
         devServer: {
             index: "./index.html",
