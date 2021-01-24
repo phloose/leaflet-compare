@@ -4,7 +4,7 @@ const { version } = require("./package.json");
 const rules = [
     {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ["css-loader"],
     },
     {
         test: /\.(jpg|png|gif|svg)$/,
