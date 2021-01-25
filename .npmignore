@@ -1,3 +1,6 @@
-!dist/leaflet-splitmap.js
-src/leaflet-splitmap.js
+src/index.js
 screencast.gif
+eslintrc.js
+babel.config.js
+jest.config.js
+webpack.config.js
