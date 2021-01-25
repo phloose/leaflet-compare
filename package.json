@@ -2,7 +2,8 @@
     "name": "leaflet-splitmap",
     "version": "1.0.1",
     "description": "Compare two Leaflet layers side by side",
-    "main": "src/index.js",
+    "main": "dist/leaflet-splitmap.js",
+    "style": "dist/leaflet-splitmap.css",
     "scripts": {
         "clean": "rimraf dist",
         "build": "webpack",
