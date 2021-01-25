@@ -10,7 +10,7 @@
         "prepare": "npm run build",
         "prepublish": "npm run clean && npm run build",
         "preversion": "npm test && npm run build",
-        "lint": "eslint src/index.js",
+        "lint": "eslint src/leaflet-splitmap.js",
         "start": "webpack serve --open --mode=development",
         "test": "jest __tests__/ --verbose"
     },
