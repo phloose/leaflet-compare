@@ -49,12 +49,11 @@ function asArray(arg) {
     return [arg];
 }
 
-function noop() {}
-
 L.Control.SplitMap = L.Control.extend({
     options: {
         thumbSize: 42,
         padding: 0,
+        position: null,
     },
 
     initialize(leftLayers, rightLayers, options) {
@@ -71,7 +70,14 @@ L.Control.SplitMap = L.Control.extend({
         return this._map.getSize().x * rangeValue + offset;
     },
 
-    setPosition: noop,
+    setPosition(offset) {
+        if (!this._map) {
+            return this;
+        }
+        this._range.value = offset;
+        this._updateClip();
+        return this;
+    },
 
     includes: L.Evented.prototype,
 
@@ -103,6 +109,9 @@ L.Control.SplitMap = L.Control.extend({
         this._range.style.paddingLeft = this._range.style.paddingRight = `${this.options.padding}px`;
         this._addEvents();
         this._updateClip();
+        if (this.options.position) {
+            this.setPosition(this.options.position);
+        }
         return this;
     },
 
