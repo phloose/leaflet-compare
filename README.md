@@ -2,13 +2,19 @@
 
 A Leaflet control to add a split screen to compare two map overlays.
 
-**This project is a fork of the leaflet-side-by-side plugin**
+**This project is a fork of the fork ([leaflet-splitmap](https://github.com/QuantStack/leaflet-splitmap)) of the [leaflet-side-by-side](https://github.com/digidem/leaflet-side-by-side) plugin**
 
 ![screencast example](screencast.gif)
 
 ### L.control.splitMap(_leftLayer[s]_, _rightLayer[s]_)
 
-Creates a new Leaflet Control for comparing two layers or collections of layers. It does not add the layers to the map - you need to do that manually. Extends `L.Control` but `setPosition()` and `getPosition` are `noop` because the position is always the same - it does not make sense for this control to be in the corner like other Leaflet controls.
+Creates a new Leaflet Control for comparing two layers or collections of layers. It does
+not add the layers to the map - you need to do that manually. Extends `L.Control` but
+`setPosition()` and `getPosition()` are used differently compared to a normal `L.Control`
+object. Currently `setPosition(offset)` sets the position of the slider by a given
+offset between 0 and 1. `getPosition()` returns the position of the slider in pixels.
+The latter can be converted to a slider offset between 0 and 1 by dividing by
+`map.getSize().x`. 
 
 ### Parameters
 
@@ -18,6 +24,7 @@ Creates a new Leaflet Control for comparing two layers or collections of layers.
 | `rightLayers` | L.Layer\|array | A Leaflet Layer or array of layers to show on the right side of the map. Any layer added to the map that is in this array will be shown on the right. These *should not be* the same as any layers in `leftLayers` |
 | `options`     | Object         | Options |
 | `options.padding` | Number     | Padding between slider min/max and the edge of the screen in pixels. Defaults to `44` - the width of the slider thumb |
+| `options.position` | Number    | Initial position of the slider given by a number between 0 (left) and 1 (right) for. Defaults to 0.5 |
 
 ### Events
 
