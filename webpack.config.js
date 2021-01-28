@@ -36,7 +36,8 @@ module.exports = {
     },
     devServer: {
         index: "./index.html",
-        publicPath: "./src/",
+        publicPath: "./src",
+        writeToDisk: true,
     },
     plugins: [new MiniCssExtractPlugin({
         filename: "leaflet-splitmap.css",
