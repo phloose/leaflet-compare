@@ -6,7 +6,7 @@
     "style": "dist/leaflet-splitmap.css",
     "scripts": {
         "clean": "rimraf dist",
-        "build": "webpack",
+        "build": "webpack --mode=production",
         "prepublishOnly": "npm run test && npm run clean && npm run build",
         "lint": "eslint src/leaflet-splitmap.js",
         "start": "webpack serve --open --mode=development",
