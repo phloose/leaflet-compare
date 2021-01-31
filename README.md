@@ -34,12 +34,6 @@ Subscribe to events using [these methods](http://leafletjs.com/reference.html#ev
 | ----------    | -------------- | ------------- |
 | `dividermove` | {x: Number} | Fired when the divider is moved. Returns an event object with the property `x` = the pixels of the divider from the left side of the map container. |
 
-### Methods
-
-| Method           | Returns        | Description   |
-| ----------       | -------------- | ------------- |
-| `setLeftLayers`  | `this`         | Set the layer(s) for the left side  |
-| `setRightLayers` | `this`         | Set the layer(s) for the right side |
 
 ### Example
 
