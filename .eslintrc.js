@@ -3,22 +3,30 @@ module.exports = {
         browser: true,
         es6: true,
     },
-    extends: ["airbnb-base", "eslint:recommended"],
+    extends: ["airbnb-base", "eslint:recommended", "prettier"],
+    plugins: ["prettier"],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: "module",
     },
     overrides: [
         {
-            files: [
-                "**/*.spec.js",
-            ],
+            files: ["**/*.spec.js"],
             env: {
                 jest: true,
             },
         },
     ],
     rules: {
+        "prettier/prettier": [
+            "error",
+            {
+                endOfLine: "auto",
+                tabWidth: 4,
+                arrowParens: "avoid",
+                trailingComma: "all",
+            },
+        ],
         quotes: ["error", "double"],
         indent: [
             "error",
