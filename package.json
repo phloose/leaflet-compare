@@ -1,14 +1,14 @@
 {
-    "name": "leaflet-splitmap",
-    "version": "1.0.1",
+    "name": "leaflet-compare",
+    "version": "1.0.0",
     "description": "Compare two Leaflet layers side by side",
-    "main": "dist/leaflet-splitmap.js",
-    "style": "dist/leaflet-splitmap.css",
+    "main": "dist/leaflet-compare.js",
+    "style": "dist/leaflet-compare.css",
     "scripts": {
         "clean": "rimraf dist",
         "build": "webpack --mode=production",
         "prepublishOnly": "npm run test && npm run clean && npm run build",
-        "lint": "eslint src/leaflet-splitmap.js",
+        "lint": "eslint src/leaflet-compare.js",
         "start": "webpack serve --open --mode=development",
         "test": "jest __tests__/ --verbose"
     },

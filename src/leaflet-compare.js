@@ -49,7 +49,7 @@ function asArray(arg) {
     return [arg];
 }
 
-L.Control.SplitMap = L.Control.extend({
+L.Control.Compare = L.Control.extend({
     options: {
         thumbSize: 42,
         padding: 0,
@@ -219,9 +219,9 @@ L.Control.SplitMap = L.Control.extend({
     },
 });
 
-L.control.splitMap = function (leftLayers, rightLayers, options) {
-    return new L.Control.SplitMap(leftLayers, rightLayers, options);
+L.control.compare = function (leftLayers, rightLayers, options) {
+    return new L.Control.Compare(leftLayers, rightLayers, options);
 };
 
-export const { SplitMap } = L.Control;
-export default SplitMap;
+export const { Compare } = L.Control;
+export default Compare;

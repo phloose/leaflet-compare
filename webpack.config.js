@@ -6,7 +6,7 @@ module.exports = {
     // embeddable jupyter-leaflet bundle
     entry: "./src/index.js",
     output: {
-        filename: "leaflet-splitmap.js",
+        filename: "leaflet-compare.js",
         path: path.resolve(__dirname, "dist"),
         publicPath: "/dist/",
     },
@@ -39,7 +39,9 @@ module.exports = {
         publicPath: "./src",
         writeToDisk: true,
     },
-    plugins: [new MiniCssExtractPlugin({
-        filename: "leaflet-splitmap.css",
-    })],
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "leaflet-compare.css",
+        }),
+    ],
 };

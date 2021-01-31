@@ -1,4 +1,4 @@
-# leaflet-splitmap
+# leaflet-compare
 
 A Leaflet control to add a split screen to compare two map overlays.
 
@@ -6,7 +6,7 @@ A Leaflet control to add a split screen to compare two map overlays.
 
 ![screencast example](screencast.gif)
 
-### L.control.splitMap(_leftLayer[s]_, _rightLayer[s]_)
+### L.control.compare(_leftLayer[s]_, _rightLayer[s]_)
 
 Creates a new Leaflet Control for comparing two layers or collections of layers. It does
 not add the layers to the map - you need to do that manually. Extends `L.Control` but
