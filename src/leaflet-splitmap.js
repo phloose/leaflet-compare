@@ -65,8 +65,9 @@ L.Control.SplitMap = L.Control.extend({
 
     getPosition() {
         const rangeValue = this._range.value;
-        const offset = (0.5 - rangeValue)
-                * (2 * this.options.padding + this.options.thumbSize);
+        const offset =
+            (0.5 - rangeValue) *
+            (2 * this.options.padding + this.options.thumbSize);
         return this._map.getSize().x * rangeValue + offset;
     },
 
