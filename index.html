@@ -45,7 +45,22 @@
         maxZoom: 16
     }).addTo(map)
 
-    L.control.compare(stamenLayer, osmLayer).addTo(map);
+    map.createPane("left")
+    map.createPane("right")
+
+    const leftCircle = L.circle([51.505, -0.09], {
+        pane: "left",
+        radius: 1000,
+        color: "#ff0000"
+    }).addTo(map);
+
+    const rightCircle = L.circle([51.505, -0.09], {
+        pane: "right",
+        radius: 1000,
+        color: "#0000ff"
+    }).addTo(map);
+
+    L.control.compare([leftCircle, stamenLayer], [rightCircle, osmLayer]).addTo(map);
     </script>
 </body>
 </html>
