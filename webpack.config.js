@@ -1,35 +1,47 @@
-var path = require('path');
-var version = require('./package.json').version;
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { version } = require("./package.json");
 
-var rules = [
-    {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+module.exports = {
+    // embeddable jupyter-leaflet bundle
+    entry: "./src/index.js",
+    output: {
+        filename: "leaflet-compare.js",
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/dist/",
     },
-    {
-        test: /\.(jpg|png|gif|svg)$/,
-        use: [
+    devtool: "source-map",
+    module: {
+        rules: [
             {
-                loader: 'file-loader',
-                options: {
-                    publicPath: "/dist/"
-                }
-            }
-        ]
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
+            },
+            {
+                test: /\.(jpg|png|gif|svg)$/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            limit: 8000,
+                            name: "images/[hash]-[name].[ext]",
+                        },
+                    },
+                ],
+            },
+        ],
     },
-];
-
-module.exports = [
-    {// embeddable jupyter-leaflet bundle
-        entry: './src/index.js',
-        output: {
-            filename: 'leaflet-splitmap.js',
-            path: path.resolve(__dirname, 'dist'),
-            publicPath: "/dist/"
-        },
-        devtool: 'source-map',
-        module: {
-            rules: rules
-        }
-    }
-];
+    externals: {
+        leaflet: "L",
+    },
+    devServer: {
+        index: "./index.html",
+        publicPath: "./src",
+        writeToDisk: true,
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "leaflet-compare.css",
+        }),
+    ],
+};

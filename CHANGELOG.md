@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [leaflet-compare 1.0.0] - tba
+
+### Added
+
+- New option `position` for setting the sliders initial position.
+- `setPosition` is no longer a noop and serves the purpose of setting the range sliders position.
+
+### Changed
+
+- Use webpack-dev-server instead of budo
+- Use ESLint instead of standard
+- Use jest for testing
+- `leaflet` is now a peerDependency since it is assumed that the user already has leaflet installed himself.
+
+### Fixed
+
+- Use `L.Evented` instead of deprecated `L.Mixin.Events`
+
+### Security
+
+- Updated all devDependencies to their latest versions
+- Removed vulnerable (and unused) dependencies from the original leaflet-side-by-side
+  plugin.
+
 ## [leaflet-splitmap]
 
 - ADDED: Allows Leaflet version 0.7.7 through 1.x
