@@ -39,6 +39,46 @@ Subscribe to events using [these methods](http://leafletjs.com/reference.html#ev
 
 [Live Example](https://phloose.github.io/leaflet-compare/) see [source](index.html)
 
+### Installation
+
+`leaflet-compare` is compatible with Leaflet 1.7.1 but should also work with older
+versions.
+
+To install it you can use npm:
+
+`npm install leaflet-compare`
+
+Then import it in your project:
+
+`import "leaflet-compare"`
+
+This will assign the `Compare` class to the `L.Control` namespace and the factory
+function `compare` to the `L.control` namespace. 
+
+As an alternative you can import the `Compare` class directly:
+
+`import { Compare } from "leaflet-compare"`
+
+Be sure to have included the Leaflet css and js files and the plugin's files
+`leaflet-compare.css` *before* you use the plugin. Otherwise the slider will not be
+shown.
+
+#### Usage in the browser without ES6 imports
+
+You can use `leaflet-compare` from a CDN like [unpkg](https://unpkg.com/). Include the
+plugin's css and js files *after* the links to the Leaflet files. Then either use
+`myScript.js` or use script tags in the body of the referencing html page.
+
+```html
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-compare/dist/leaflet-compare.css" />
+    <script src="https://unpkg.com/leaflet-compare/dist/leaflet-compare.js"></script>
+    <script src="myScript.js"></script>
+</head>
+```
+
 ### Limitations
 
 - The divider is not movable with IE.
