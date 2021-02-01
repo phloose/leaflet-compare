@@ -37,7 +37,7 @@ Subscribe to events using [these methods](http://leafletjs.com/reference.html#ev
 
 ### Example
 
-[Live Example](http://lab.digital-democracy.org/leaflet-side-by-side/) see [source](index.html)
+[Live Example](https://phloose.github.io/leaflet-compare/) see [source](index.html)
 
 ### Limitations
 
