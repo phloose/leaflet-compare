@@ -60,7 +60,7 @@
         color: "#0000ff"
     }).addTo(map);
 
-    L.control.compare([leftCircle, stamenLayer], [rightCircle, osmLayer]).addTo(map);
+    const compare = L.control.compare([leftCircle, stamenLayer], [rightCircle, osmLayer]).addTo(map);
     </script>
 </body>
 </html>
