@@ -1,6 +1,10 @@
+.vscode/
+coverage/
+__tests__/
 src/index.js
+index.html
 screencast.gif
-eslintrc.js
+.eslintrc.js
 babel.config.js
 jest.config.js
 webpack.config.js
