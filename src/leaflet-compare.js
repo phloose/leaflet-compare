@@ -53,7 +53,7 @@ L.Control.Compare = L.Control.extend({
     options: {
         thumbSize: 42,
         padding: 0,
-        position: null,
+        position: 0.5,
     },
 
     initialize(leftLayers, rightLayers, options) {
