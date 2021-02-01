@@ -1,6 +1,6 @@
 {
     "name": "leaflet-compare",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Compare two Leaflet layers side by side",
     "main": "dist/leaflet-compare.js",
     "style": "dist/leaflet-compare.css",

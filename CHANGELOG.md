@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [leaflet-compare 1.0.1] - 2021-02-01
+
+### Changed
+
+- Republish to overcome npm's unpublish policy. Version 1.0.0 had the fork's links
+  in package.json, some files where not ignored in .npmignore and the release date was
+  still tba.
+
 ## [leaflet-compare 1.0.0] - 2021-02-01
 
 ### Added
