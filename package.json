@@ -1,6 +1,6 @@
 {
     "name": "leaflet-compare",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Compare two Leaflet layers side by side",
     "main": "dist/leaflet-compare.js",
     "style": "dist/leaflet-compare.css",
@@ -39,12 +39,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/QuantStack/leaflet-splitmap.git"
+        "url": "git+https://github.com/phloose/leaflet-compare.git"
     },
     "bugs": {
-        "url": "https://github.com/QuantStack/leaflet-splitmap/issues"
+        "url": "https://github.com/phloose/leaflet-compare/issues"
     },
-    "homepage": "https://github.com/QuantStack/leaflet-splitmap#readme",
+    "homepage": "https://github.com/phloose/leaflet-compare#readme",
     "peerDependencies": {
         "leaflet": "^1.7.1"
     }
